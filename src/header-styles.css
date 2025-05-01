@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'runic';
+    src: url(runic.ttf);
+}
+
+.header-button {
+    font-family: 'runic';
+    font-size: 2em;
+}

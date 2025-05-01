@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'STRAXA_NET';
+    src: url(runic.ttf);
+}
+#content {
+    font-size: 5em;
+    font-family: 'STRAXA_NET';
+    letter-spacing: 3px;
+}
+
+.valhalla {
+    visibility: hidden;
+}
