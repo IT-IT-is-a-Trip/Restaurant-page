@@ -11,5 +11,4 @@ export const clearContent = () => {
     //     e.addEventListener('click', clearAll);
     // })
     // button.addEventListener('click', clearAll);
-    //afa
 }
