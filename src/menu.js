@@ -6,7 +6,7 @@ export const addMenu = () => {
         const menu = document.createElement('div');
         menu.classList.add('menu-container');
         
-        const monday = document.createElement('div')
+        const monday = document.createElement('div');
         monday.classList.add('monday');
         const cardTheme = document.createElement('div')
         cardTheme.classList.add('card-theme');
@@ -15,8 +15,11 @@ export const addMenu = () => {
             const position = document.createElement('div');
             position.classList.add(`position`);
             cardTheme.appendChild(position);
-        }
-        menu.textContent = 'Main: Baked Salmon & Mash';
+        };
+        const mondayTag = document.createElement('div');
+        mondayTag.classList.add('monday-tag');
+        mondayTag.textContent = 'monday';
+        monday.appendChild(mondayTag);
         clearContent();
         menu.appendChild(monday);
         content.appendChild(menu);

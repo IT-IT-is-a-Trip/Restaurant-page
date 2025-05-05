@@ -12,14 +12,16 @@ body {
     font-family: 'runic';
     color: aliceblue;
     background: rgba(124, 91, 0, 0.1);
-    max-height: 15vh;
-    font-size: 11vh;
+    max-height: 9vw;
+    font-size: 6.5vw;
     border: 0;
 }
 .header {
     background: rgba(218, 181, 30, 0.9);
-    padding: 0 100px 0 100px;
     position: sticky;
+    top: 0;
+    width: 100vw;
+    letter-spacing: 100px;
 }
 .header-nav {
     display: flex;
@@ -30,18 +32,20 @@ body {
     align-items: center;
 }
 .header-nav-right-buttons {
+    padding: 0 100px 0 100px;
     padding: 10px 50px 10px 50px;
     display: flex;
     background: rgba(124, 91, 0, 0.1);
     align-items: center;
     gap: 2.5vw;
-    margin: 20px;
+    margin: 10px 50px 10px 10px;
     border-radius: 15px;
 }
 #home-button {
     padding: 10px 60px 10px 60px;
-    font-size: 14vh;
+    font-size: 7.5vw;
     border-radius: 15px;
     display: flex;
     align-items: center;
+    margin: 0 50px 0 50px;
 }

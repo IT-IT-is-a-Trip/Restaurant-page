@@ -1,19 +1,27 @@
 import { clearContent } from "./clear";
 import { buttons } from "./buttons";
+import instLogo from './instagram-logo.png';
+import faceLogo from './facebook-logo.png';
+import xLogo from './x-logo.png';
 export const addContacts = () => {
     const generateContactsPage = () => {
         const content = document.getElementById('content');
         const contacts = document.createElement('div');
-        contacts.classList.add('contats-container');
+        contacts.classList.add('contacts-container');
 
         //socials card block:
         const socials = document.createElement('div');
         socials.classList.add('socials-container');
         const socialsTheme = document.createElement('div');
+        const socialsTag = document.createElement('div');
+        socialsTag.classList.add('socials-tag');
+        socialsTag.textContent = 'socials';
         socialsTheme.classList.add('socials-theme');
 
         contacts.appendChild(socials);
         socials.appendChild(socialsTheme);
+        socialsTheme.appendChild(socialsTag);
+
 
 
         //inst block:
@@ -29,7 +37,7 @@ export const addContacts = () => {
         instagramLink.textContent = '@VALHALLA_555';
         const instagramLogo = document.createElement('img');
         instagramLogo.classList.add('instagram-logo');
-        instagramLogo.src = '';
+        instagramLogo.src = instLogo;
         //appending inst:
         instagramContainer.appendChild(instagramTextContainer);
         instagramContainer.appendChild(instagramLogo);
@@ -52,7 +60,7 @@ export const addContacts = () => {
         facebookLink.textContent = '@VALHALLA_555';
         const facebookLogo = document.createElement('img');
         facebookLogo.classList.add('facebook-logo');
-        facebookLogo.src = '';
+        facebookLogo.src = faceLogo;
         //appending facebook:
         facebookContainer.appendChild(facebookTextContainer);
         facebookContainer.appendChild(facebookLogo);
@@ -75,7 +83,7 @@ export const addContacts = () => {
         xTwitterLink.textContent = '@VALHALLA_555';
         const xTwitterLogo = document.createElement('img');
         xTwitterLogo.classList.add('x-logo');
-        xTwitterLogo.src = '';
+        xTwitterLogo.src = xLogo;
         //appending inst:
         xTwitterContainer.appendChild(xTwitterTextContainer);
         xTwitterContainer.appendChild(xTwitterLogo);
@@ -90,8 +98,6 @@ export const addContacts = () => {
         locationCardContainer.classList.add('location-container');
         const locationTheme = document.createElement('div');
         locationTheme.classList.add('location-theme');
-        const locationsTextContainer = document.createElement('div');
-        locationsTextContainer.classList.add('locations-text-container');
         const location1Text = document.createElement('div');
         location1Text.classList.add('location1');
         location1Text.textContent = 'Eldfjallgata 17, 510 Hólmavík, Iceland';
@@ -102,18 +108,23 @@ export const addContacts = () => {
         location3Text.classList.add('location3');
         location3Text.textContent = 'Fjallabrekka 12, 510 Hólmavík, Iceland';
 
+        //location-tag: 
+        const locationTag = document.createElement('div');
+        locationTag.classList.add('location-tag');
+        locationTag.textContent = 'location';
+        locationTheme.appendChild(locationTag);
         //appending locations:
         locationCardContainer.appendChild(locationTheme);
-        locationTheme.appendChild(locationsTextContainer);
-        locationsTextContainer.appendChild(location1Text);
-        locationsTextContainer.appendChild(location2Text);
-        locationsTextContainer.appendChild(location3Text);
+        locationTheme.appendChild(location1Text);
+        locationTheme.appendChild(location2Text);
+        locationTheme.appendChild(location3Text);
 
         contacts.appendChild(locationCardContainer);
 
 
 
         clearContent();
+        document.body.classList.add('toggle');
         content.appendChild(contacts);
     }
     buttons.contacts.addEventListener('click', generateContactsPage)

@@ -5,6 +5,7 @@ export const clearContent = () => {
             content.removeChild(content.firstChild);
         } 
     }
+    document.body.classList.remove('toggle');
     clearAll();
     // const buttons = document.querySelectorAll('.header-button');
     // buttons.forEach((e) => {
