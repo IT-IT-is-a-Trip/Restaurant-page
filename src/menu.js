@@ -1,5 +1,10 @@
 import { clearContent } from "./clear";
 import { buttons } from "./buttons";
+import { generateTuesdayMenu } from "./menu-tuesday";
+import { generateWednesdayMenu } from "./menu-wednesday";
+import { generateThursdayMenu } from "./menu-thursday";
+import { generateFridayMenu } from "./menu-friday";
+import { generateSaturdayMenu } from "./menu-saturday";
 export const addMenu = () => {
     const generateMenuPage = () => {
         const content = document.getElementById('content');
@@ -11,16 +16,19 @@ export const addMenu = () => {
         const cardTheme = document.createElement('div')
         cardTheme.classList.add('card-theme');
         monday.appendChild(cardTheme);
+
         for (let i = 0; i<6; i++) {
             const position = document.createElement('div');
             position.classList.add(`position`);
             cardTheme.appendChild(position);
         };
+
         const mondayTag = document.createElement('div');
         mondayTag.classList.add('monday-tag');
         mondayTag.textContent = 'monday';
         monday.appendChild(mondayTag);
         clearContent();
+        document.body.classList.add('toggle');
         menu.appendChild(monday);
         content.appendChild(menu);
         const positions = document.querySelectorAll('.position');
@@ -30,6 +38,11 @@ export const addMenu = () => {
         positions[3].textContent = 'Salad: Cucumber & Radish';
         positions[4].textContent = 'Dessert: Cinnamon Bun';
         positions[5].textContent = 'Drink: Filter Coffee / Sea Buckthorn Tea';
+        generateTuesdayMenu();
+        generateWednesdayMenu();
+        generateThursdayMenu();
+        generateFridayMenu();
+        generateSaturdayMenu();
     }
     buttons.menu.addEventListener('click', generateMenuPage);
 }

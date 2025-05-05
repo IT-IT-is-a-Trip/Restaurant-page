@@ -144,7 +144,7 @@ contacts
     background-color: var(--font-text-background-color);
     padding: 0.3vw;
 }
-.instagram-text-container {
+/* .instagram-text-container {
 
 }
 .nstagram-text {
@@ -152,7 +152,7 @@ contacts
 }
 .instagram-link {
 
-}
+} */
 .instagram-logo,
 .facebook-logo,
 .x-logo {
@@ -160,7 +160,7 @@ contacts
     width: 4vw;
     height: 4vw;
 }
-.facebook-text-container {
+/* .facebook-text-container {
 
 }
 .facebook-text {
@@ -186,7 +186,7 @@ contacts
 }
 .locations-text-container {
 
-}
+} */
 .location1,
 .location2,
 .location3 {
@@ -201,9 +201,11 @@ menu:
 .menu-container {
     display: grid;
     grid-template: 1fr 1fr 1fr/1fr 1fr;
+    gap: 4vw;
+    padding: 2vw;
 }
 .monday,
-.tusday,
+.tuesday,
 .wednesday,
 .thursday,
 .friday,
@@ -221,13 +223,18 @@ menu:
     padding: 2vw 1.5vw 1.5vw 0.7vw;
     border-radius: 15px;
 }
-.position {
+.position,
+.positionTuesday,
+.positionWednesday,
+.positionThursday,
+.positionFriday,
+.positionSaturday {
     background-color: var(--font-text-background-color);
     padding: 0.1vw 0.3vw;
     text-decoration: underline;
 }
 .monday-tag,
-.tusday-tag,
+.tuesday-tag,
 .wednesday-tag,
 .thursday-tag,
 .friday-tag,
@@ -249,7 +256,7 @@ menu:
 */
 .toggle::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
