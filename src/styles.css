@@ -80,11 +80,11 @@ about page
     font-size: 6.5vw;
     border-radius: 5px;
     position: absolute;
-    top: -13vh;
+    top: -3.5vw;
     left: -4vw;
     color: var(--font-tag-color);
     background-color: var(--card-tag-color);
-    transform: rotate(-7.18deg);
+    transform: rotate(-7.6deg);
     width: 24vw;
     height: 8vw;
 }

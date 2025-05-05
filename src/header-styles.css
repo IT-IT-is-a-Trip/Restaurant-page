@@ -20,6 +20,7 @@ body {
     background: rgba(218, 181, 30, 0.9);
     position: sticky;
     top: 0;
+    z-index: 100;
     width: 100vw;
     letter-spacing: 100px;
 }
