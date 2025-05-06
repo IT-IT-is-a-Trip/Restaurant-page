@@ -15,6 +15,7 @@ export const generateWednesdayMenu = () => {
 
     const wednesdayTag = document.createElement('div');
     wednesdayTag.classList.add('wednesday-tag');
+    wednesday.classList.add('day-menu');
     wednesdayTag.textContent = 'wednesday';
     wednesday.appendChild(wednesdayTag);
     menu.appendChild(wednesday);

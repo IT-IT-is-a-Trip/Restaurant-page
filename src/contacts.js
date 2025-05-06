@@ -17,10 +17,13 @@ export const addContacts = () => {
         socialsTag.classList.add('socials-tag');
         socialsTag.textContent = 'socials';
         socialsTheme.classList.add('socials-theme');
+        const socialsTextTheme = document.createElement('div');
+        socialsTextTheme.classList.add('socials-text-theme');
 
         contacts.appendChild(socials);
         socials.appendChild(socialsTheme);
         socialsTheme.appendChild(socialsTag);
+        socialsTheme.appendChild(socialsTextTheme);
 
 
 
@@ -44,7 +47,7 @@ export const addContacts = () => {
         instagramTextContainer.appendChild(instagramText);
         instagramTextContainer.appendChild(instagramLink);
 
-        socialsTheme.appendChild(instagramContainer);
+        socialsTextTheme.appendChild(instagramContainer);
 
 
         //facebook block:
@@ -67,7 +70,7 @@ export const addContacts = () => {
         facebookTextContainer.appendChild(facebookText);
         facebookTextContainer.appendChild(facebookLink);
 
-        socialsTheme.appendChild(facebookContainer);
+        socialsTextTheme.appendChild(facebookContainer);
 
 
         //X block:
@@ -90,7 +93,7 @@ export const addContacts = () => {
         xTwitterTextContainer.appendChild(xTwitterText);
         xTwitterTextContainer.appendChild(xTwitterLink);
 
-        socialsTheme.appendChild(xTwitterContainer);
+        socialsTextTheme.appendChild(xTwitterContainer);
 
 
         //location block:

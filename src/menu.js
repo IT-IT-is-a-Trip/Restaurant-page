@@ -5,6 +5,7 @@ import { generateWednesdayMenu } from "./menu-wednesday";
 import { generateThursdayMenu } from "./menu-thursday";
 import { generateFridayMenu } from "./menu-friday";
 import { generateSaturdayMenu } from "./menu-saturday";
+import { todayTag } from "./menu-today";
 export const addMenu = () => {
     const generateMenuPage = () => {
         const content = document.getElementById('content');
@@ -13,6 +14,7 @@ export const addMenu = () => {
         
         const monday = document.createElement('div');
         monday.classList.add('monday');
+        monday.classList.add('day-menu');
         const cardTheme = document.createElement('div')
         cardTheme.classList.add('card-theme');
         monday.appendChild(cardTheme);
@@ -43,6 +45,14 @@ export const addMenu = () => {
         generateThursdayMenu();
         generateFridayMenu();
         generateSaturdayMenu();
+
+        //adding today tag:
+        const days = document.querySelectorAll('.day-menu');
+        const daysArray = ['sunday', ...Array.from(days)];
+        const today = new Date();
+        const dateNumber = today.getDay();
+        const dayName = daysArray[dateNumber];
+        dayName.appendChild(todayTag());
     }
     buttons.menu.addEventListener('click', generateMenuPage);
 }
