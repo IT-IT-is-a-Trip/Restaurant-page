@@ -6,11 +6,14 @@ export const generateWednesdayMenu = () => {
     const cardTheme = document.createElement('div')
     cardTheme.classList.add('card-theme');
     wednesday.appendChild(cardTheme);
+    const positionsTheme = document.createElement('div');
+    positionsTheme.classList.add('positions-theme');
+    cardTheme.appendChild(positionsTheme);
 
     for (let i = 0; i < 6; i++) {
         const position = document.createElement('div');
         position.classList.add(`positionWednesday`);
-        cardTheme.appendChild(position);
+        positionsTheme.appendChild(position);
     };
 
     const wednesdayTag = document.createElement('div');
@@ -20,10 +23,10 @@ export const generateWednesdayMenu = () => {
     wednesday.appendChild(wednesdayTag);
     menu.appendChild(wednesday);
     const positions = document.querySelectorAll('.positionWednesday');
-    positions[0].textContent = 'breakfast: Avocado & Egg Toast';
-    positions[1].textContent = 'Soup: Cauliflower Cream';
-    positions[2].textContent = 'Main: Baked Salmon & Mash';
-    positions[3].textContent = 'Salad: Cucumber & Radish';
-    positions[4].textContent = 'Dessert: Cinnamon Bun';
-    positions[5].textContent = 'Drink: Filter Coffee / Sea Buckthorn Tea';
+    positions[0].textContent = 'breakfast: Egg & Herring';
+    positions[1].textContent = 'Soup: Creamy Fish';
+    positions[2].textContent = 'Main: Cod Balls & Potatoes';
+    positions[3].textContent = 'Salad: Kale & Apple';
+    positions[4].textContent = 'Dessert: Sea Salt Brownie';
+    positions[5].textContent = 'Drink: Espresso / Black Tea';
 }

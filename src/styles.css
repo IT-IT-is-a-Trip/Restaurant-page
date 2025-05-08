@@ -44,7 +44,7 @@ about page
     background-color: var(--card-color);
     display: flex;
     transform: rotate(1deg);
-    border-radius: 7px;
+    border-radius: 0.5vw;
     box-shadow: 31px 19px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
@@ -54,7 +54,7 @@ about page
     margin: 0.7vw 1vw 1vw 0.7vw;
     padding: 1.5vw;
     transform: rotate(-0.64deg);
-    border-radius: 15px;
+    border-radius: 1vw;
 }
 
 .aboutText {
@@ -63,7 +63,7 @@ about page
     text-decoration-line: underline;
     text-align: left;
     background-color: var(--font-text-background-color);
-    border-radius: 5px;
+    border-radius: 0.3vw;
 }
 
 .about-tag {
@@ -100,7 +100,7 @@ contacts
 .socials-container,
 .location-container {
     background-color: var(--card-color);
-    border-radius: 7px;
+    border-radius: 0.5vw;
     transform: rotate(1deg);
     /* box-shadow: 2px 4px 8px 0px rgba(34, 60, 80, 0.2); */
     box-shadow: 31px 19px 8px 0px rgba(34, 60, 80, 0.2);
@@ -109,7 +109,7 @@ contacts
 .location-theme {
     height: 80%;
     margin: 0.7vw 1.1vw 1.1vw 0.7vw;
-    border-radius: 15px;
+    border-radius: 1vw;
     padding: 1.5vw;
     padding-top: 2vw;
     transform: rotate(-1deg);
@@ -121,6 +121,7 @@ contacts
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 0.5vw;
 }
 .socials-tag,
 .location-tag {
@@ -217,7 +218,7 @@ menu:
     font-size: 2vw;
     background-color: var(--card-color);
     transform: rotate(1deg);
-    border-radius: 7px;
+    border-radius: 0.5vw;
     box-shadow: 31px 19px 8px 0px rgba(34, 60, 80, 0.2);
 }
 .card-theme {
@@ -225,7 +226,17 @@ menu:
     margin: 0.7vw 1.2vw 1.2vw 0.7vw;
     transform: rotate(-0.64deg);
     padding: 2vw 1.5vw 1.5vw 0.7vw;
-    border-radius: 15px;
+    border-radius: 1vw;
+    height: 80%;
+}
+.positions-theme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-color: var(--font-text-background-color);
+    height: 100%;
+    border-radius: 0.5vw;
 }
 .position,
 .positionTuesday,
@@ -233,7 +244,7 @@ menu:
 .positionThursday,
 .positionFriday,
 .positionSaturday {
-    background-color: var(--font-text-background-color);
+    /* background-color: var(--font-text-background-color); */
     padding: 0.1vw 0.3vw;
     text-decoration: underline;
 }
@@ -261,16 +272,16 @@ menu today tag:
 */
 
 .today-tag {
+    position: absolute;
     font-family: 'runic';
     font-size: 3.8vw;
-    position: absolute;
     color: var(--font-tag-color);
     background-color: var(--card-tag-color);
     transform: rotate(6.66deg);
     padding: 0.3vw;
     border-radius: 3px;
     top: -1.4vw;
-    left: 39.2vw;
+    left: 35.2vw;
 }
 
 

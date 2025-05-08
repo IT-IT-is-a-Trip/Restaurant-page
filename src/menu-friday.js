@@ -6,11 +6,14 @@ export const generateFridayMenu = () => {
     const cardTheme = document.createElement('div')
     cardTheme.classList.add('card-theme');
     friday.appendChild(cardTheme);
+    const positionsTheme = document.createElement('div');
+    positionsTheme.classList.add('positions-theme');
+    cardTheme.appendChild(positionsTheme);
 
     for (let i = 0; i < 6; i++) {
         const position = document.createElement('div');
         position.classList.add(`positionFriday`);
-        cardTheme.appendChild(position);
+        positionsTheme.appendChild(position);
     };
 
     const fridayTag = document.createElement('div');
@@ -20,10 +23,10 @@ export const generateFridayMenu = () => {
     friday.appendChild(fridayTag);
     menu.appendChild(friday);
     const positions = document.querySelectorAll('.positionFriday');
-    positions[0].textContent = 'breakfast: Avocado & Egg Toast';
-    positions[1].textContent = 'Soup: Cauliflower Cream';
-    positions[2].textContent = 'Main: Baked Salmon & Mash';
-    positions[3].textContent = 'Salad: Cucumber & Radish';
-    positions[4].textContent = 'Dessert: Cinnamon Bun';
-    positions[5].textContent = 'Drink: Filter Coffee / Sea Buckthorn Tea';
+    positions[0].textContent = 'breakfast: Cottage & Berries';
+    positions[1].textContent = 'Soup: Smoked Fish';
+    positions[2].textContent = 'Main: Reindeer Stew (or Beef)';
+    positions[3].textContent = 'Salad: Cabbage & Apple';
+    positions[4].textContent = 'Dessert: emolina & Cloudberry';
+    positions[5].textContent = 'Drink: Black Coffee / Rosehip Tea';
 }

@@ -15,14 +15,17 @@ export const addMenu = () => {
         const monday = document.createElement('div');
         monday.classList.add('monday');
         monday.classList.add('day-menu');
-        const cardTheme = document.createElement('div')
+        const cardTheme = document.createElement('div');
+        const positionsTheme = document.createElement('div');
+        positionsTheme.classList.add('positions-theme');
         cardTheme.classList.add('card-theme');
         monday.appendChild(cardTheme);
+        cardTheme.appendChild(positionsTheme);
 
         for (let i = 0; i<6; i++) {
             const position = document.createElement('div');
             position.classList.add(`position`);
-            cardTheme.appendChild(position);
+            positionsTheme.appendChild(position);
         };
 
         const mondayTag = document.createElement('div');
@@ -52,6 +55,7 @@ export const addMenu = () => {
         const today = new Date();
         const dateNumber = today.getDay();
         const dayName = daysArray[dateNumber];
+        // const dayName = daysArray[1];
         dayName.appendChild(todayTag());
     }
     buttons.menu.addEventListener('click', generateMenuPage);
